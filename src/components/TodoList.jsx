@@ -12,15 +12,6 @@ function TodoList() {
     localStorage.setItem("myTodos", JSON.stringify(todos));
   }, [todos]);
 
-  // const [todos, setTodos] = useState([]);
-
-  // useEffect(() => {
-  //   const savedTodos = localStorage.getItem("myTodos");
-  //   if (savedTodos) {
-  //     setTodos(JSON.parse(savedTodos));
-  //   }
-  // }, []);
-
   const handleAddTodo = (text) => {
     const newTodoObject = {
       id: Date.now(),
@@ -30,7 +21,7 @@ function TodoList() {
 
     setTodos((prevTodos) => [...prevTodos, newTodoObject]);
   };
-
+  ///////////////////////////////////////////////////////////////////////
   const handleToggleComplete = (id) => {
     setTodos((prevTodos) =>
       prevTodos.map((todo) =>
